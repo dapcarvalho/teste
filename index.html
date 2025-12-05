@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberShield - Proteção Digital</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Tela de Login -->
+  <div class="login-container" id="login-container">
+    <div class="form-box">
+      <h1>CyberShield</h1>
+      <p class="subtitle">Sua defesa digital inteligente</p>
+      <form id="loginForm">
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <input type="password" id="loginPassword" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+        <p>Não tem conta? <a href="#" id="showRegister">Cadastre-se</a></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Tela de Cadastro -->
+  <div class="register-container" id="register-container">
+    <div class="form-box">
+      <h1>Cadastro - CyberShield</h1>
+      <form id="registerForm">
+        <input type="text" id="registerName" placeholder="Nome completo" required>
+        <input type="email" id="registerEmail" placeholder="Email" required>
+        <input type="password" id="registerPassword" placeholder="Senha" required>
+        <button type="submit">Cadastrar</button>
+        <p>Já tem conta? <a href="#" id="showLogin">Faça login</a></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Site principal -->
+  <header id="mainHeader" class="hidden">
+    <div class="logo">
+      <img src="ChatGPT Image 5 de nov. de 2025, 20_26_44.png" alt="CyberShield Logo">
+      <h1>CyberShield</h1>
+    </div>
+    <nav>
+      <a href="#" class="nav-link" data-tab="home">Início</a>
+      <a href="#" class="nav-link" data-tab="protecao">Proteção</a>
+      <a href="#" class="nav-link" data-tab="backup">Backup</a>
+      <a href="#" class="nav-link" data-tab="recuperacao">Recuperação</a>
+      <a href="#" class="nav-link" data-tab="perfil">Perfil</a>
+      <button id="logoutBtn">Sair</button>
+    </nav>
+  </header>
+
+  <main id="content" class="hidden">
+
+    <section id="home" class="tab active">
+      <h2>Bem-vindo à CyberShield</h2>
+      <p>Seu aliado na defesa contra vírus, ameaças e perda de dados.</p>
+      <div class="card">
+        <h3>Proteção em tempo real</h3>
+        <p>Monitore seu sistema continuamente e bloqueie ameaças automaticamente.</p>
+      </div>
+    </section>
+
+    <section id="protecao" class="tab">
+      <h2>Verificação de Proteção</h2>
+      <p>Clique no botão abaixo para simular uma verificação de vírus.</p>
+      <button id="scanBtn">Iniciar Verificação</button>
+      <div id="scanResult" class="result-box"></div>
+    </section>
+
+    <section id="backup" class="tab">
+      <h2>Backup de Arquivos</h2>
+      <p>Envie um arquivo para fazer o backup simulado (armazenado localmente).</p>
+      <input type="file" id="backupFile">
+      <button id="backupBtn">Fazer Backup</button>
+      <div id="backupList" class="result-box"></div>
+    </section>
+
+    <section id="recuperacao" class="tab">
+      <h2>Recuperação de Arquivos</h2>
+      <p>Selecione um arquivo salvo em backup para restaurar.</p>
+      <select id="recoverSelect"></select>
+      <button id="recoverBtn">Restaurar</button>
+      <div id="recoverResult" class="result-box"></div>
+    </section>
+
+    <section id="perfil" class="tab">
+      <h2>Perfil do Usuário</h2>
+      <div id="profileData"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
